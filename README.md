@@ -44,7 +44,7 @@ python tools/train_net.py --num-gpus 1 \
 ```
 
 
-#### 3. Stage 3: Fine-tune for pseudo data.
+#### 4. Stage 3: Fine-tune for pseudo data.
 
 ```
 python3 -m tools.genarate_pseudo --num-gpus 1
@@ -56,11 +56,9 @@ python3 -m tools.train_feature --num-gpus 1
 
 To evaluate the trained models, run
 
-```angular2html
+```
 python tools/test_net.py --num-gpus 1 \
-        --config-file configs/PascalVOC-detection/split1/faster_rcnn_R_101_FPN_ft_all1_10shot.yaml \
-        --eval-only
-
+        --config-file configs/COCO-detection/faster_rcnn_R_101_FPN_ft_all_10shot.yaml \
         --eval-only
 ```
 
